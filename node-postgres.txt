@@ -1,0 +1,35 @@
+1. Explore and understand what Node and Express is used for.
+
+2. How to connect your PostgreSQL database to node and express.
+
+3. What is significance of layered architecture in Node & Express.
+	src/
+	├── config/             # Environment configs, DB connection, third-party credentials
+	│   ├── db.js
+	│   └── env.js
+	├── controllers/        # Request handling and HTTP response logic
+	│   └── user.controller.js
+	├── services/           # Pure business logic
+	│   └── user.service.js
+	├── repositories/       # Data access layer (database queries/models)
+	│   └── user.repository.js
+	├── models/             # Database schemas/entities (e.g., Mongoose / Prisma / Sequelize)
+	│   └── user.model.js
+	├── routes/             # Route declarations and endpoint mappings
+	│   ├── index.js
+	│   └── user.routes.js
+	├── middlewares/        # Express middlewares (auth, validation, error handling)
+	│   ├── auth.middleware.js
+	│   ├── error.middleware.js
+	│   └── validate.middleware.js
+	├── validations/        # Schema validation (e.g., Zod, Joi)
+	│   └── user.validation.js
+	├── utils/              # Helper utilities (custom error classes, formatters, logger)
+	│   ├── apiError.js
+	│   └── apiResponse.js
+	├── app.js              # Express app setup and middleware configuration
+	└── server.js           # Server entry point (starts HTTP listener)
+	
+4. CRUD application for a simple Book Information Keeping app where FindById, FindAll. 
+
+5. Table name -> books | Coloums -> id, name, isbn, price, pages, description, instock(boolean)
